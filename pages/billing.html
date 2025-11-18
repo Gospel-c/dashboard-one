@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <meta name="description" content="Modern analytics dashboard with real-time data visualization">
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Main Content -->
+        <main class="main-content rounded-2xl">
+            <header class="top-header">
+                <div class="breadcrumb">
+                    <span>Pages / Billing</span>
+                </div>
+                <div class="header-actions">
+                    <input type="text" placeholder="Type here..." class="search-input">
+                    <button class="icon-button"><ion-icon name="notifications-outline"></ion-icon></button>
+                    <button class="icon-button"><ion-icon name="information-outline"></ion-icon></button>
+                    <button class="icon-button"><ion-icon name="person-outline"></ion-icon></button>
+                </div>
+            </header>
+
+            <!-- Stats Cards -->
+            <section class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+                <article class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-label">Today's Money</div>
+                        <div class="stat-value">$53,000</div>
+                        <div class="stat-change positive">+55%</div>
+                    </div>
+                    <div class="stat-icon blue"><ion-icon name="cash-outline"></ion-icon></div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-label">Today's Users</div>
+                        <div class="stat-value">2,300</div>
+                        <div class="stat-change positive">+3%</div>
+                    </div>
+                    <div class="stat-icon blue"><ion-icon name="people-outline"></ion-icon></div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-label">New Clients</div>
+                        <div class="stat-value">+3,052</div>
+                        <div class="stat-change negative">-2%</div>
+                    </div>
+                    <div class="stat-icon blue"><ion-icon name="newspaper-outline"></ion-icon></div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-label">Total Sales</div>
+                        <div class="stat-value">$173,000</div>
+                        <div class="stat-change positive">+5%</div>
+                    </div>
+                    <div class="stat-icon blue"><ion-icon name="cart-outline"></ion-icon></div>
+                </article>
+            </section>
+
+            <!-- Middle Section -->
+            <section class="middle-grid">
+                <div class="welcome-card">
+                    <div class="welcome-content">
+                        <div class="welcome-text">
+                            <div class="welcome-label">Welcome back</div>
+                            <h2>Mark Johnson</h2>
+                            <p>Glad to see you again!<br>Ask me anything.</p>
+                            <button class="tap-button">Tap to record →</button>
+                        </div>
+                    </div>
+                    <div class="welcome-bg"></div>
+                </div>
+
+                <div class="safety-score">
+                    <span class="score-pill">Safety</span>
+                    <div class="score-main">
+                        <div>
+                            <div class="score-value">9.3</div>
+                            <div class="score-subtitle">Total score</div>
+                        </div>
+                        <div class="score-trend positive">
+                            <ion-icon name="trending-up-outline"></ion-icon>
+                            <span>+12%</span>
+                        </div>
+                    </div>
+                    <p class="score-desc">Systems are operating within safe thresholds and continue to trend upward.</p>
+                    <div class="score-metrics">
+                        <div class="metric-item">
+                            <div class="metric-text">
+                                <span class="metric-label">System checks</span>
+                                <span class="metric-value">92%</span>
+                            </div>
+                            <div class="metric-bar">
+                                <span class="metric-fill" style="--fill: 92%;"></span>
+                            </div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-text">
+                                <span class="metric-label">Incident response</span>
+                                <span class="metric-value">88%</span>
+                            </div>
+                            <div class="metric-bar">
+                                <span class="metric-fill" style="--fill: 88%;"></span>
+                            </div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-text">
+                                <span class="metric-label">Compliance</span>
+                                <span class="metric-value">97%</span>
+                            </div>
+                            <div class="metric-bar">
+                                <span class="metric-fill" style="--fill: 97%;"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="referral-card">
+                    <div class="card-header-with-menu">
+                        <div>
+                            <h3>Referral Tracking</h3>
+                        </div>
+                        <button class="menu-button">⋯</button>
+                    </div>
+                    <div class="referral-stats">
+                        <div class="referral-stat">
+                            <div class="referral-label">Invited</div>
+                            <div class="referral-value">145 people</div>
+                        </div>
+                        <div class="referral-stat">
+                            <div class="referral-label">Bonus</div>
+                            <div class="referral-value">1,465</div>
+                        </div>
+                    </div>
+                    <div class="referral-charts">
+                        <div class="chart-card">
+                            <div class="chart-header">
+                                <div>
+                                    <p class="chart-label">Weekly invites</p>
+                                    <h4 class="chart-total">1,245</h4>
+                                </div>
+                                <span class="chart-trend positive">+18%</span>
+                            </div>
+                            <svg class="sparkline sparkline-bars" viewBox="0 0 120 60" preserveAspectRatio="none">
+                                <rect x="5" y="30" width="8" height="25"></rect>
+                                <rect x="20" y="20" width="8" height="35"></rect>
+                                <rect x="35" y="15" width="8" height="40"></rect>
+                                <rect x="50" y="10" width="8" height="45"></rect>
+                                <rect x="65" y="15" width="8" height="40"></rect>
+                                <rect x="80" y="25" width="8" height="30"></rect>
+                                <rect x="95" y="18" width="8" height="37"></rect>
+                            </svg>
+                        </div>
+                        <div class="chart-card">
+                            <div class="chart-header">
+                                <div>
+                                    <p class="chart-label">Conversion rate</p>
+                                    <h4 class="chart-total">42%</h4>
+                                </div>
+                                <span class="chart-trend neutral">↗ steady</span>
+                            </div>
+                            <svg class="sparkline sparkline-line" viewBox="0 0 140 60" preserveAspectRatio="none">
+                                <polyline points="0,45 20,35 40,38 60,25 80,28 100,18 120,22 140,12"></polyline>
+                                <circle cx="140" cy="12" r="3"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Charts Section -->
+            <!-- <section class="grid grid grid-cols-[1fr_2fr] gap-3 mb-6">
+                <div class="sales-chart-card">
+                    <h3>Sales overview</h3>
+                    <p class="card-subtitle">↗ +5% more in 2021</p>
+                    <canvas id="salesChart"></canvas>
+                </div>
+
+                <div class="active-users-card">
+                    <h3>Active Users</h3>
+                    <p class="card-subtitle">↗ +23% than last week</p>
+                    <canvas id="activeUsersChart"></canvas>
+                    <div class="users-stats">
+                        <div class="user-stat">
+                            <span class="stat-icon blue"><ion-icon name="people-outline"></ion-icon></span>
+                            <div>
+                                <div class="stat-label">Users</div>
+                                <div class="stat-number">32,984</div>
+                            </div>
+                        </div>
+                        <div class="user-stat">
+                            <span class="stat-icon blue">✓</span>
+                            <div>
+                                <div class="stat-label">Clicks</div>
+                                <div class="stat-number">2.42m</div>
+                            </div>
+                        </div>
+                        <div class="user-stat">
+                            <span class="stat-icon blue"><ion-icon name="cash-outline"></ion-icon></span>
+                            <div>
+                                <div class="stat-label">Sales</div>
+                                <div class="stat-number">2,400$</div>
+                            </div>
+                        </div>
+                        <div class="user-stat">
+                            <span class="stat-icon blue"><ion-icon name="albums-outline"></ion-icon></span>
+                            <div>
+                                <div class="stat-label">Items</div>
+                                <div class="stat-number">320</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+            <!-- Bottom Section -->
+            <section class="grid grid-cols-[2fr_1fr] gap-3">
+                <div class="projects-card">
+                    <div class="card-header-with-menu">
+                        <div>
+                            <h3>Projects</h3>
+                            <p class="card-subtitle"><ion-icon name="trending-up-outline"></ion-icon> 30 done this month</p>
+                        </div>
+                        <button class="menu-button">⋯</button>
+                    </div>
+                    <table class="projects-table">
+                        <thead>
+                            <tr>
+                                <th>COMPANIES</th>
+                                <th>MEMBERS</th>
+                                <th>BUDGET</th>
+                                <th>COMPLETION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="company-cell">
+                                        <span class="company-icon"><ion-icon name="logo-nodejs"></ion-icon></span>
+                                        <span>Node js</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="members-avatars">
+                                        <span class="avatar"><ion-icon name="person-outline"></ion-icon></span>
+                                        <span class="avatar"><ion-icon name="person-outline"></ion-icon></span>
+                                        <span class="avatar"><ion-icon name="person-outline"></ion-icon></span>
+                                        <span class="avatar"><ion-icon name="person-outline"></ion-icon></span>
+                                    </div>
+                                </td>
+                                <td>$14,000</td>
+                                <td>
+                                    <div class="completion-cell">
+                                        <span>60%</span>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 60%"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="orders-card">
+                    <h3>Orders overview</h3>
+                    <p class="card-subtitle"><ion-icon name="trending-up-outline"></ion-icon> +30% this month</p>
+                    <div class="orders-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-icon green"><ion-icon name="checkmark-done-outline"></ion-icon></div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">$2400, Design changes</div>
+                                <div class="timeline-date">22 DEC 7:20 PM</div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon red">🔴</div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">New order #4219423</div>
+                                <div class="timeline-date">21 DEC 11:21 PM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../home.js"></script>
+</body>
+</html>
+
