@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Administration</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-[#0b1220] to-[#07111e] text-white font-poppins flex">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+      <div class="sidebar-header">
+          <div class="logo">
+              <span class="logo-icon">◈</span>
+              <span class="logo-text">TodoBro</span>
+          </div>
+      </div>
+      
+      <nav class="sidebar-nav">
+          <div class="nav-section">
+              <a href="#" data-page="pages/home.html" class="nav-item active">
+                  <span class="nav-icon"><ion-icon name="home-outline"></ion-icon></span>
+                  <span>Dashboard</span>
+              </a>
+              <a href="#" data-page="pages/tables.html" class="nav-item">
+                  <span class="nav-icon"><ion-icon name="book-outline"></ion-icon></span>
+                  <span>Tables</span>
+              </a>
+              <a href="#" data-page="pages/billing.html" class="nav-item">
+                  <span class="nav-icon"><ion-icon name="card-outline"></ion-icon></span>
+                  <span>Billing</span>
+              </a>
+          </div>
+          
+          <div class="nav-section">
+              <div class="nav-label">ACCOUNT PAGES</div>
+              <a href="#" data-page="pages/profile.html" class="nav-item">
+                  <span class="nav-icon"><ion-icon name="person-outline"></ion-icon></span>
+                  <span>Profile</span>
+              </a>
+              <a href="#" data-page="pages/signin.html" class="nav-item">
+                  <span class="nav-icon"><ion-icon name="bag-check-outline"></ion-icon></span>
+                  <span>Sign In</span>
+              </a>
+              <a href="#" data-page="pages/signup.html" class="nav-item">
+                  <span class="nav-icon"><ion-icon name="bag-outline"></ion-icon></span>
+                  <span>Sign Up</span>
+              </a>
+          </div>
+      </nav>
+      
+      <div class="sidebar-footer">
+          <div class="help-card">
+              <div class="help-icon">?</div>
+              <h4>Need help?</h4>
+              <p>Please check our docs</p>
+              <button class="help-button">DOCUMENTATION</button>
+          </div>
+      </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main id="main-content" class="flex-1 p-6 ml-6 overflow-y-auto">
+    <!-- Dynamic content loads here -->
+  </main>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="home.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
