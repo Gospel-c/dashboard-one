@@ -273,37 +273,3 @@ function animateValue(element, start, end, duration) {
         element.textContent = Math.floor(current).toLocaleString();
     }, 16);
 }
-
-// Responsive sidebar toggle for mobile
-if (window.innerWidth <= 768) {
-    const sidebar = document.querySelector('.sidebar');
-    const mainContent = document.querySelector('.main-content');
-    
-    let toggleButton = document.createElement('button');
-    toggleButton.innerHTML = '☰';
-    toggleButton.style.cssText = `
-        position: fixed;
-        top: 1rem;
-        left: 1rem;
-        z-index: 1000;
-        background: var(--accent-blue);
-        border: none;
-        color: white;
-        width: 40px;
-        height: 40px;
-        border-radius: 8px;
-        font-size: 1.5rem;
-        cursor: pointer;
-        display: none;
-    `;
-    
-    if (window.innerWidth <= 768) {
-        toggleButton.style.display = 'block';
-        document.body.appendChild(toggleButton);
-        
-        toggleButton.addEventListener('click', () => {
-            sidebar.style.transform = sidebar.style.transform === 'translateX(0px)' ? 
-                'translateX(-100%)' : 'translateX(0px)';
-        });
-    }
-}
