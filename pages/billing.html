@@ -4,379 +4,271 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Billing</title>
-    <meta name="description" content="Billing & Subscription">
+    <meta name="description" content="Billing & subscription overview">
     <link rel="stylesheet" href="/css/dashboard.css">
 </head>
 <body>
     <div class="dashboard-container">
-        <!-- Main Content -->
         <main class="main-content rounded-2xl">
             <header class="top-header">
                 <div class="breadcrumb">
                     <span>Pages / Billing</span>
                 </div>
                 <div class="header-actions">
+                    <input type="text" placeholder="Search invoices..." class="search-input">
                     <button class="icon-button"><ion-icon name="notifications-outline"></ion-icon></button>
                     <button class="icon-button"><ion-icon name="settings-outline"></ion-icon></button>
                     <button class="icon-button"><ion-icon name="person-outline"></ion-icon></button>
                 </div>
             </header>
 
-            <!-- Current Plan Section -->
-            <section class="billing-section">
-                <div class="current-plan-card">
-                    <div class="plan-header">
-                        <div>
-                            <h2>Current Plan</h2>
-                            <p class="plan-subtitle">Manage your subscription and billing</p>
-                        </div>
-                        <span class="plan-badge active">Active</span>
+            <section class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+                <article class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-label">Current Plan</div>
+                        <div class="stat-value">Pro</div>
+                        <div class="stat-change positive">Active</div>
                     </div>
-                    <div class="plan-details">
-                        <div class="plan-info">
-                            <div class="plan-name">
-                                <h3>Pro Plan</h3>
-                                <p class="plan-description">Perfect for growing teams and businesses</p>
+                    <div class="stat-icon blue"><ion-icon name="star-outline"></ion-icon></div>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-label">Monthly Spend</div>
+                        <div class="stat-value">$49</div>
+                        <div class="stat-change positive">+5% YoY</div>
+                    </div>
+                    <div class="stat-icon blue"><ion-icon name="card-outline"></ion-icon></div>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-label">Invoices Paid</div>
+                        <div class="stat-value">48</div>
+                        <div class="stat-change positive">100% on time</div>
+                    </div>
+                    <div class="stat-icon blue"><ion-icon name="receipt-outline"></ion-icon></div>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-label">Usage</div>
+                        <div class="stat-value">62%</div>
+                        <div class="stat-change negative">-3% MoM</div>
+                    </div>
+                    <div class="stat-icon blue"><ion-icon name="speedometer-outline"></ion-icon></div>
+                </article>
+            </section>
+
+            <section class="middle-grid">
+                <div class="welcome-card">
+                    <div class="welcome-content">
+                        <div class="welcome-text">
+                            <div class="welcome-label">Plan overview</div>
+                            <h2>Pro subscription</h2>
+                            <p>Unlimited projects, 100GB storage, priority support, and advanced analytics.</p>
+                            <button class="tap-button">Manage subscription →</button>
+                        </div>
+                    </div>
+                    <div class="welcome-bg"></div>
+                </div>
+
+                <div class="safety-score">
+                    <span class="score-pill">Payment health</span>
+                    <div class="score-main">
+                        <div>
+                            <div class="score-value">9.7</div>
+                            <div class="score-subtitle">Collection score</div>
+                        </div>
+                        <div class="score-trend positive">
+                            <ion-icon name="trending-up-outline"></ion-icon>
+                            <span>+12%</span>
+                        </div>
+                    </div>
+                    <p class="score-desc">Auto-pay enabled, no failed payments in the last 12 months.</p>
+                    <div class="score-metrics">
+                        <div class="metric-item">
+                            <div class="metric-text">
+                                <span class="metric-label">Auto-pay</span>
+                                <span class="metric-value">On</span>
                             </div>
-                            <div class="plan-price">
-                                <div class="price-amount">$49<span class="price-period">/month</span></div>
-                                <p class="price-billing">Billed monthly</p>
+                            <div class="metric-bar">
+                                <span class="metric-fill" style="--fill: 100%;"></span>
                             </div>
                         </div>
-                        <div class="plan-features">
-                            <div class="feature-item">
-                                <ion-icon name="checkmark-circle" class="feature-icon"></ion-icon>
-                                <span>Unlimited projects</span>
+                        <div class="metric-item">
+                            <div class="metric-text">
+                                <span class="metric-label">Chargebacks</span>
+                                <span class="metric-value">0%</span>
                             </div>
-                            <div class="feature-item">
-                                <ion-icon name="checkmark-circle" class="feature-icon"></ion-icon>
-                                <span>Advanced analytics</span>
-                            </div>
-                            <div class="feature-item">
-                                <ion-icon name="checkmark-circle" class="feature-icon"></ion-icon>
-                                <span>Priority support</span>
-                            </div>
-                            <div class="feature-item">
-                                <ion-icon name="checkmark-circle" class="feature-icon"></ion-icon>
-                                <span>Custom integrations</span>
+                            <div class="metric-bar">
+                                <span class="metric-fill" style="--fill: 98%;"></span>
                             </div>
                         </div>
-                        <div class="plan-actions">
-                            <button class="btn-upgrade">Upgrade Plan</button>
-                            <button class="btn-cancel-plan">Cancel Subscription</button>
+                        <div class="metric-item">
+                            <div class="metric-text">
+                                <span class="metric-label">Renewal ready</span>
+                                <span class="metric-value">Mar 15</span>
+                            </div>
+                            <div class="metric-bar">
+                                <span class="metric-fill" style="--fill: 78%;"></span>
+                            </div>
                         </div>
-                        <div class="plan-renewal">
-                            <p><ion-icon name="calendar-outline"></ion-icon> Next billing date: <strong>March 15, 2024</strong></p>
+                    </div>
+                </div>
+
+                <div class="referral-card">
+                    <div class="card-header-with-menu">
+                        <div>
+                            <h3>Invoice insights</h3>
+                        </div>
+                        <button class="menu-button">⋯</button>
+                    </div>
+                    <div class="referral-stats">
+                        <div class="referral-stat">
+                            <div class="referral-label">Outstanding</div>
+                            <div class="referral-value">$0</div>
+                        </div>
+                        <div class="referral-stat">
+                            <div class="referral-label">Paid YTD</div>
+                            <div class="referral-value">$245</div>
+                        </div>
+                    </div>
+                    <div class="referral-charts">
+                        <div class="chart-card">
+                            <div class="chart-header">
+                                <div>
+                                    <p class="chart-label">Monthly spend</p>
+                                    <h4 class="chart-total">$49</h4>
+                                </div>
+                                <span class="chart-trend positive">+5%</span>
+                            </div>
+                            <svg class="sparkline sparkline-bars" viewBox="0 0 120 60" preserveAspectRatio="none">
+                                <rect x="5" y="25" width="8" height="30"></rect>
+                                <rect x="20" y="20" width="8" height="35"></rect>
+                                <rect x="35" y="18" width="8" height="37"></rect>
+                                <rect x="50" y="15" width="8" height="40"></rect>
+                                <rect x="65" y="18" width="8" height="37"></rect>
+                                <rect x="80" y="22" width="8" height="33"></rect>
+                                <rect x="95" y="19" width="8" height="36"></rect>
+                            </svg>
+                        </div>
+                        <div class="chart-card">
+                            <div class="chart-header">
+                                <div>
+                                    <p class="chart-label">Invoice approvals</p>
+                                    <h4 class="chart-total">100%</h4>
+                                </div>
+                                <span class="chart-trend neutral">steady</span>
+                            </div>
+                            <svg class="sparkline sparkline-line" viewBox="0 0 140 60" preserveAspectRatio="none">
+                                <polyline points="0,40 20,35 40,38 60,26 80,28 100,22 120,20 140,18"></polyline>
+                                <circle cx="140" cy="18" r="3"></circle>
+                            </svg>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Payment Method Section -->
-            <section class="billing-section">
-                <div class="billing-card">
-                    <div class="billing-card-header">
+            <section class="grid grid-cols-[2fr_1fr] gap-3">
+                <div class="projects-card">
+                    <div class="card-header-with-menu">
                         <div>
-                            <h3>Payment Method</h3>
-                            <p class="card-subtitle">Manage your payment methods</p>
+                            <h3>Billing history</h3>
+                            <p class="card-subtitle"><ion-icon name="time-outline"></ion-icon> Last 4 invoices</p>
                         </div>
-                        <button class="btn-add-payment">
-                            <ion-icon name="add-outline"></ion-icon>
-                            Add Payment Method
-                        </button>
+                        <button class="menu-button">⋯</button>
                     </div>
-                    <div class="payment-methods">
-                        <div class="payment-method-card default">
-                            <div class="payment-method-info">
-                                <div class="payment-icon">
-                                    <ion-icon name="card-outline"></ion-icon>
-                                </div>
-                                <div class="payment-details">
-                                    <div class="payment-name">Visa •••• 4242</div>
-                                    <div class="payment-meta">Expires 12/2025</div>
-                                </div>
-                            </div>
-                            <div class="payment-actions">
-                                <span class="default-badge">Default</span>
-                                <button class="btn-icon-small">
-                                    <ion-icon name="create-outline"></ion-icon>
-                                </button>
-                                <button class="btn-icon-small">
-                                    <ion-icon name="trash-outline"></ion-icon>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="payment-method-card">
-                            <div class="payment-method-info">
-                                <div class="payment-icon">
-                                    <ion-icon name="card-outline"></ion-icon>
-                                </div>
-                                <div class="payment-details">
-                                    <div class="payment-name">Mastercard •••• 8888</div>
-                                    <div class="payment-meta">Expires 08/2026</div>
-                                </div>
-                            </div>
-                            <div class="payment-actions">
-                                <button class="btn-icon-small">
-                                    <ion-icon name="create-outline"></ion-icon>
-                                </button>
-                                <button class="btn-icon-small">
-                                    <ion-icon name="trash-outline"></ion-icon>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                    <table class="projects-table">
+                        <thead>
+                            <tr>
+                                <th>DATE</th>
+                                <th>DESCRIPTION</th>
+                                <th>AMOUNT</th>
+                                <th>STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="company-cell">
+                                        <span class="company-icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                                        <span>15 Feb 2024</span>
+                                    </div>
+                                </td>
+                                <td>Pro Plan · Monthly</td>
+                                <td>$49.00</td>
+                                <td>
+                                    <span class="status-badge status-active">Paid</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="company-cell">
+                                        <span class="company-icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                                        <span>15 Jan 2024</span>
+                                    </div>
+                                </td>
+                                <td>Pro Plan · Monthly</td>
+                                <td>$49.00</td>
+                                <td>
+                                    <span class="status-badge status-active">Paid</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="company-cell">
+                                        <span class="company-icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                                        <span>15 Dec 2023</span>
+                                    </div>
+                                </td>
+                                <td>Pro Plan · Monthly</td>
+                                <td>$49.00</td>
+                                <td>
+                                    <span class="status-badge status-active">Paid</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="company-cell">
+                                        <span class="company-icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                                        <span>15 Nov 2023</span>
+                                    </div>
+                                </td>
+                                <td>Plan upgrade</td>
+                                <td>$49.00</td>
+                                <td>
+                                    <span class="status-badge status-active">Paid</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </section>
 
-            <!-- Billing History Section -->
-            <section class="billing-section">
-                <div class="billing-card">
-                    <div class="billing-card-header">
-                        <div>
-                            <h3>Billing History</h3>
-                            <p class="card-subtitle">View and download your invoices</p>
-                        </div>
-                        <button class="btn-secondary-small">
-                            <ion-icon name="download-outline"></ion-icon>
-                            Export All
-                        </button>
-                    </div>
-                    <div class="billing-table-wrapper">
-                        <table class="billing-table">
-                            <thead>
-                                <tr>
-                                    <th>Date</th>
-                                    <th>Description</th>
-                                    <th>Amount</th>
-                                    <th>Status</th>
-                                    <th>Invoice</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="invoice-date">
-                                            <div class="date-primary">Feb 15, 2024</div>
-                                            <div class="date-secondary">Monthly subscription</div>
-                                        </div>
-                                    </td>
-                                    <td>Pro Plan - Monthly</td>
-                                    <td>
-                                        <div class="invoice-amount">$49.00</div>
-                                    </td>
-                                    <td>
-                                        <span class="invoice-status paid">Paid</span>
-                                    </td>
-                                    <td>
-                                        <button class="btn-download">
-                                            <ion-icon name="download-outline"></ion-icon>
-                                            Download
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="invoice-date">
-                                            <div class="date-primary">Jan 15, 2024</div>
-                                            <div class="date-secondary">Monthly subscription</div>
-                                        </div>
-                                    </td>
-                                    <td>Pro Plan - Monthly</td>
-                                    <td>
-                                        <div class="invoice-amount">$49.00</div>
-                                    </td>
-                                    <td>
-                                        <span class="invoice-status paid">Paid</span>
-                                    </td>
-                                    <td>
-                                        <button class="btn-download">
-                                            <ion-icon name="download-outline"></ion-icon>
-                                            Download
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="invoice-date">
-                                            <div class="date-primary">Dec 15, 2023</div>
-                                            <div class="date-secondary">Monthly subscription</div>
-                                        </div>
-                                    </td>
-                                    <td>Pro Plan - Monthly</td>
-                                    <td>
-                                        <div class="invoice-amount">$49.00</div>
-                                    </td>
-                                    <td>
-                                        <span class="invoice-status paid">Paid</span>
-                                    </td>
-                                    <td>
-                                        <button class="btn-download">
-                                            <ion-icon name="download-outline"></ion-icon>
-                                            Download
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="invoice-date">
-                                            <div class="date-primary">Nov 15, 2023</div>
-                                            <div class="date-secondary">Plan upgrade</div>
-                                        </div>
-                                    </td>
-                                    <td>Pro Plan - Monthly</td>
-                                    <td>
-                                        <div class="invoice-amount">$49.00</div>
-                                    </td>
-                                    <td>
-                                        <span class="invoice-status paid">Paid</span>
-                                    </td>
-                                    <td>
-                                        <button class="btn-download">
-                                            <ion-icon name="download-outline"></ion-icon>
-                                            Download
-                                        </button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Usage Statistics Section -->
-            <section class="billing-section">
-                <div class="billing-card">
-                    <div class="billing-card-header">
-                        <div>
-                            <h3>Usage Statistics</h3>
-                            <p class="card-subtitle">Your current plan usage</p>
-                        </div>
-                    </div>
-                    <div class="usage-stats-grid">
-                        <div class="usage-stat-card">
-                            <div class="usage-stat-header">
-                                <div class="usage-stat-icon projects">
-                                    <ion-icon name="folder-outline"></ion-icon>
-                                </div>
-                                <div class="usage-stat-info">
-                                    <div class="usage-stat-value">12 / Unlimited</div>
-                                    <div class="usage-stat-label">Projects</div>
-                                </div>
-                            </div>
-                            <div class="usage-progress">
-                                <div class="usage-progress-bar" style="width: 15%"></div>
+                <div class="orders-card">
+                    <h3>Payment methods</h3>
+                    <p class="card-subtitle"><ion-icon name="shield-checkmark-outline"></ion-icon> Auto-renew enabled</p>
+                    <div class="orders-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-icon blue"><ion-icon name="card-outline"></ion-icon></div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">Visa •••• 4242</div>
+                                <div class="timeline-date">Default · Expires 12/2025</div>
                             </div>
                         </div>
-                        <div class="usage-stat-card">
-                            <div class="usage-stat-header">
-                                <div class="usage-stat-icon storage">
-                                    <ion-icon name="server-outline"></ion-icon>
-                                </div>
-                                <div class="usage-stat-info">
-                                    <div class="usage-stat-value">45.2 GB / 100 GB</div>
-                                    <div class="usage-stat-label">Storage</div>
-                                </div>
-                            </div>
-                            <div class="usage-progress">
-                                <div class="usage-progress-bar" style="width: 45.2%"></div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon purple"><ion-icon name="card-outline"></ion-icon></div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">Mastercard •••• 8888</div>
+                                <div class="timeline-date">Backup · Expires 08/2026</div>
                             </div>
                         </div>
-                        <div class="usage-stat-card">
-                            <div class="usage-stat-header">
-                                <div class="usage-stat-icon users">
-                                    <ion-icon name="people-outline"></ion-icon>
-                                </div>
-                                <div class="usage-stat-info">
-                                    <div class="usage-stat-value">8 / 25</div>
-                                    <div class="usage-stat-label">Team Members</div>
-                                </div>
-                            </div>
-                            <div class="usage-progress">
-                                <div class="usage-progress-bar" style="width: 32%"></div>
-                            </div>
-                        </div>
-                        <div class="usage-stat-card">
-                            <div class="usage-stat-header">
-                                <div class="usage-stat-icon api">
-                                    <ion-icon name="code-outline"></ion-icon>
-                                </div>
-                                <div class="usage-stat-info">
-                                    <div class="usage-stat-value">12,450 / 50,000</div>
-                                    <div class="usage-stat-label">API Calls</div>
-                                </div>
-                            </div>
-                            <div class="usage-progress">
-                                <div class="usage-progress-bar" style="width: 24.9%"></div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon green"><ion-icon name="add-outline"></ion-icon></div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">Add new method</div>
+                                <div class="timeline-date">ACH · Apple Pay · PayPal</div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <!-- Available Plans Section -->
-            <section class="billing-section">
-                <div class="billing-card">
-                    <div class="billing-card-header">
-                        <div>
-                            <h3>Available Plans</h3>
-                            <p class="card-subtitle">Choose the plan that fits your needs</p>
-                        </div>
-                    </div>
-                    <div class="plans-grid">
-                        <div class="plan-card">
-                            <div class="plan-card-header">
-                                <h4>Starter</h4>
-                                <div class="plan-card-price">
-                                    <span class="plan-price-value">$19</span>
-                                    <span class="plan-price-period">/month</span>
-                                </div>
-                            </div>
-                            <ul class="plan-features-list">
-                                <li><ion-icon name="checkmark-outline"></ion-icon> 5 Projects</li>
-                                <li><ion-icon name="checkmark-outline"></ion-icon> 10 GB Storage</li>
-                                <li><ion-icon name="checkmark-outline"></ion-icon> 5 Team Members</li>
-                                <li><ion-icon name="checkmark-outline"></ion-icon> Basic Support</li>
-                            </ul>
-                            <button class="btn-plan-select">Select Plan</button>
-                        </div>
-                        <div class="plan-card featured">
-                            <div class="plan-badge-featured">Current Plan</div>
-                            <div class="plan-card-header">
-                                <h4>Pro</h4>
-                                <div class="plan-card-price">
-                                    <span class="plan-price-value">$49</span>
-                                    <span class="plan-price-period">/month</span>
-                                </div>
-                            </div>
-                            <ul class="plan-features-list">
-                                <li><ion-icon name="checkmark-outline"></ion-icon> Unlimited Projects</li>
-                                <li><ion-icon name="checkmark-outline"></ion-icon> 100 GB Storage</li>
-                                <li><ion-icon name="checkmark-outline"></ion-icon> 25 Team Members</li>
-                                <li><ion-icon name="checkmark-outline"></ion-icon> Priority Support</li>
-                                <li><ion-icon name="checkmark-outline"></ion-icon> Advanced Analytics</li>
-                            </ul>
-                            <button class="btn-plan-current">Current Plan</button>
-                        </div>
-                        <div class="plan-card">
-                            <div class="plan-card-header">
-                                <h4>Enterprise</h4>
-                                <div class="plan-card-price">
-                                    <span class="plan-price-value">$99</span>
-                                    <span class="plan-price-period">/month</span>
-                                </div>
-                            </div>
-                            <ul class="plan-features-list">
-                                <li><ion-icon name="checkmark-outline"></ion-icon> Unlimited Projects</li>
-                                <li><ion-icon name="checkmark-outline"></ion-icon> 500 GB Storage</li>
-                                <li><ion-icon name="checkmark-outline"></ion-icon> Unlimited Members</li>
-                                <li><ion-icon name="checkmark-outline"></ion-icon> 24/7 Support</li>
-                                <li><ion-icon name="checkmark-outline"></ion-icon> Custom Integrations</li>
-                                <li><ion-icon name="checkmark-outline"></ion-icon> Dedicated Manager</li>
-                            </ul>
-                            <button class="btn-plan-select">Upgrade</button>
-                        </div>
-                    </div>
+                    <button class="tap-button" style="margin-top: 1rem;">Manage payment methods</button>
                 </div>
             </section>
         </main>
@@ -385,3 +277,4 @@
     <script src="../home.js"></script>
 </body>
 </html>
+

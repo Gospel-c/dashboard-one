@@ -882,6 +882,14 @@ canvas {
     background: var(--accent-red);
 }
 
+.timeline-icon.blue {
+    background: var(--accent-blue);
+}
+
+.timeline-icon.purple {
+    background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+}
+
 .timeline-title {
     font-weight: 600;
     margin-bottom: 0.25rem;
@@ -1119,6 +1127,9 @@ canvas {
     .projects-card,
     .orders-card {
         padding: 1.25rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .projects-table {
@@ -1138,6 +1149,18 @@ canvas {
     .projects-table th,
     .projects-table td {
         padding: 0.75rem 0.5rem;
+    }
+
+    /* Table wrapper in projects-card */
+    .projects-card .table-wrapper {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .projects-card .data-table {
+        min-width: 600px;
     }
 
     .orders-timeline {
@@ -1389,8 +1412,16 @@ canvas {
         justify-content: flex-end;
     }
 
+    .table-wrapper {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
     .data-table {
         font-size: 0.75rem;
+        min-width: 600px;
     }
 
     .data-table th,
@@ -3019,9 +3050,17 @@ canvas {
     .billing-table {
         font-size: 0.75rem;
     }
-
+    
     .billing-table th,
     .billing-table td {
         padding: 0.75rem 0.5rem;
     }
+
+    /* Ensure generic grid sections stack */
+    .main-content > section.grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+    }
+
+    /* Ensure data tables scroll on small screens */
 }
